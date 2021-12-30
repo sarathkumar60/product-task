@@ -12,5 +12,8 @@ class ProductTestCase(APITestCase):
             "stock_quantity": 8
 
         }
+        volume_test = int(data['item_cost'])*int(data['stock_quantity'])
         response = self.client.post("/product/", data)
+        volume = response.data['details']['volume']
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(volume_test, volume)

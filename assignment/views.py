@@ -19,7 +19,6 @@ class ProductViewSet(viewsets.ModelViewSet):
             print(item_cost)
             print(stock_quantity)
             volume = int(item_cost)*int(stock_quantity)
-            print(volume)
             product = Product.objects.create(
                 Name=name,
                 item_cost=item_cost,
