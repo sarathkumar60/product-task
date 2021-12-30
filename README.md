@@ -10,7 +10,7 @@ git clone https://github.com/sarathkumar60/product-task
 cd product-task/product-task
 
 # install requirements
-$pip install re-requirements
+$pip install -r requirements.txt
 
 # run the migrations to create sqllite database
 $ python manage.py migrate
